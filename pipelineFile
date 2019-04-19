@@ -23,7 +23,7 @@ node('AWS-EC2')
     }
     
     stage('Sonar Scan'){
-        dir("firebase-service") {
+        dir("TDD-TS") {
             sh "export PATH=$PATH:/home/ec2-user/sonar/bin && sonar-scanner -Dsonar.projectKey=huyduong1589_TDD-TS -Dsonar.organization=huyduong1589-github -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=54dce316840bf4c68ebe0be1306eb8e0f3bf1127"
         }
     }
@@ -48,7 +48,7 @@ node('AWS-EC2')
     }
 
     stage('Test'){
-        dir("firebase-service") {
+        dir("TDD-TS") {
             sh "pwd"
         }
     }
