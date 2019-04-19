@@ -4,7 +4,7 @@ describe('Login API Test', function() {
     // Function
     it('Login API Test should pass with correct credential', async function() {
         var options = { method: 'POST',
-        url: 'http://localhost:3000/login',
+        url: 'http://3.1.217.123:1313/login',
         headers: 
         { 'cache-control': 'no-cache',
             'Content-Type': 'application/json' },
@@ -20,7 +20,7 @@ describe('Login API Test', function() {
 
     it('Login API Test should fail with incorrect credential', async function(){
         var options = { method: 'POST',
-        url: 'http://localhost:3000/login',
+        url: 'http://3.1.217.123:1313/login',
         headers: 
         { 'cache-control': 'no-cache',
             'Content-Type': 'application/json' },
