@@ -53,8 +53,20 @@ node('AWS-EC2')
 
 node('Long-Node')
     {
-    stage('Check out on Node'){
+    stage('Check out test'){
         checkout scm
+    }
+    
+    stage('Install Libs'){
+        bat 'npm install'
+    }
+    
+    stage('Start Webdriver'){
+        bat 'npm run  webdriver-update'
+    }
+    
+    stage('Run Test'){
+        bat 'npm test'
     }
 }
 
