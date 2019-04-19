@@ -1,6 +1,6 @@
 FROM huyduong1589/nodejs-express:golden
 
-COPY TDD-TS/ opt/TDD-TS
+COPY ./ opt/TDD-TS
 
 WORKDIR opt/TDD-TS/
 
