@@ -20,7 +20,7 @@ describe('workspace-project App', function() {
   // Function
   it('should see email, password input boxes and submit button', async function() {
     browser.waitForAngularEnabled(false);
-    await browser.get("http://localhost:3000");
+    await browser.get("http://3.1.217.123:1313");
     await browser.sleep(5000);
 
     page.verifyElementByXpath("//input[@id='email']"); // Verify input box with id "email" is shown on page => This means dev should code an input box with id "email"

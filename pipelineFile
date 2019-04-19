@@ -17,9 +17,11 @@ node('AWS-EC2')
     stage('Build'){
         sh "pwd"
         sh "ls -lrt"
-        dir("TDD-TS") {
-            sh "npm install"
-        }
+        sh "npm install"
+    }
+    
+    stage('Sonar Scan'){
+            sh "export PATH=$PATH:/home/ec2-user/sonar/bin && sonar-scanner -Dsonar.projectKey=huyduong1589_TDD-TS -Dsonar.organization=huyduong1589-github -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=54dce316840bf4c68ebe0be1306eb8e0f3bf1127"
     }
 
     stage("Image Clean Up"){
@@ -42,11 +44,30 @@ node('AWS-EC2')
     }
 
     stage('Test'){
-        dir("firebase-service") {
+        dir("TDD-TS") {
             sh "pwd"
         }
     }
 
+}
+
+node('Long-Node')
+    {
+    stage('Check out test'){
+        checkout scm
+    }
+    
+    stage('Install Libs'){
+        bat 'npm install'
+    }
+    
+    stage('Start Webdriver'){
+        bat 'npm run  webdriver-update'
+    }
+    
+    stage('Run Test'){
+        bat 'npm test'
+    }
 }
 
 def imageBuild(containerName, tag){
