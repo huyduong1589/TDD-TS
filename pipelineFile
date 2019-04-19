@@ -51,6 +51,13 @@ node('AWS-EC2')
 
 }
 
+node('Long-Node')
+    {
+    stage('Check out on Node'){
+        checkout scm
+    }
+}
+
 def imageBuild(containerName, tag){
     sh "sudo docker build -t $containerName:$tag  -t $containerName --pull --no-cache ."
     echo "Image build complete"
