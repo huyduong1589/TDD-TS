@@ -1,0 +1,4 @@
+Given I navigate to url "http://localhost:3000"
+When I input username and password
+And I click "Submit" button
+Then I can see my page
