@@ -43,12 +43,6 @@ node('AWS-EC2')
         sh 'sleep 10'
     }
 
-    stage('Test'){
-        dir("TDD-TS") {
-            sh "pwd"
-        }
-    }
-
 }
 
 node('Long-Node')
