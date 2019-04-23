@@ -45,7 +45,7 @@ node('AWS-EC2')
 
 }
 
-node('Long-Node')
+node('Huy-Node')
     {
     stage('Check out test'){
         checkout scm
