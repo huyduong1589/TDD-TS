@@ -1,11 +1,14 @@
 import { browser, logging, by } from 'protractor';
 import { VerifyElement } from '../common_function/verifyElement';
 
-describe('workspace-project App', function() {
+describe('Login Page Test', function() {
   let page: VerifyElement;
   
-  beforeEach(function() {
+  beforeEach(async function() {
     page = new VerifyElement(browser);
+    browser.waitForAngularEnabled(false);
+    await browser.get("http://localhost:3000");
+    await browser.sleep(5000);
   });
 
   afterEach(async function() {
@@ -18,15 +21,17 @@ describe('workspace-project App', function() {
 
 
   // Function
-  it('should see email, password input boxes and submit button', async function() {
-    browser.waitForAngularEnabled(false);
-    await browser.get("http://3.1.217.123:1313");
-    await browser.sleep(5000);
+  it('should see email, password input boxes and submit button and required', async function() {
 
-    page.verifyElementByXpath("//input[@id='email']"); // Verify input box with id "email" is shown on page => This means dev should code an input box with id "email"
+    page.verifyElementPresentByXpath("//input[@id='email']"); // Verify input box with id "email" is shown on page => This means dev should code an input box with id "email"
 
-    page.verifyElementByXpath("//input[@id='password']"); // Verify input box with id "password" is shown on page => This means dev should code an input box with id "email"
+    page.verifyElementPresentByXpath("//input[@id='password']"); // Verify input box with id "password" is shown on page => This means dev should code an input box with id "email"
 
-    page.verifyElementByXpath("//button[@id='submit']"); // Verify button with id "submit" is shown on page => This means dev should code an input box with id "email"
+    page.verifyElementPresentByXpath("//button[@id='submit']"); // Verify button with id "submit" is shown on page => This means dev should code an input box with id "email"
+  
+    page.verifyElementIsRequired("//input[@id='email']");
+
+    page.verifyElementIsRequired("//input[@id='password']");
+
   });
 });
