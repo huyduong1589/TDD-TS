@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="login-page;login-with-valid-credential" tests="4" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="D:/TDD/Sharing/TDD-TS-master/features/Login.feature">
+            </property>
+        </properties>
+        <testcase name="When I navigate to http://localhost:3000" classname="login-page;login-with-valid-credential" time="0.000504974">
+        </testcase>
+        <testcase name="When I provide username, password" classname="login-page;login-with-valid-credential" time="0.001210532">
+        </testcase>
+        <testcase name="When I click Submit button" classname="login-page;login-with-valid-credential" time="0.00051084">
+        </testcase>
+        <testcase name="Then I should login" classname="login-page;login-with-valid-credential" time="0.000561865">
+        </testcase>
+    </testsuite>
+</testsuites>

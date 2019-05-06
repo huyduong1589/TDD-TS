@@ -2,10 +2,12 @@
   "name": "myapp",
   "version": "0.0.0",
   "private": true,
+  "main": "index.js",
   "scripts": {
     "start": "node ./bin/www",
     "test": "protractor ./test/protractor.conf.js",
-    "webdriver-update": "webdriver-manager update"
+    "webdriver-update": "webdriver-manager update",
+    "cucumber": "node ./node_modules/selenium-cucumber-js/index.js -s ./step-definitions -x 50000"
   },
   "dependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
@@ -42,6 +44,7 @@
     "morgan": "~1.9.0",
     "protractor": "~5.4.0",
     "rxjs": "~6.3.3",
+    "selenium-cucumber-js": "^1.6.2",
     "serve-favicon": "^2.5.0",
     "ts-node": "~7.0.0",
     "tslib": "^1.9.0",

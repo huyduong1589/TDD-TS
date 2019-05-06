@@ -1,0 +1,87 @@
+[
+  {
+    "description": "    I should be able to login  ",
+    "elements": [
+      {
+        "id": "login-page;login-with-valid-credential",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Login with valid credential",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I navigate to http://localhost:3000",
+            "result": {
+              "status": "passed",
+              "duration": 504974
+            },
+            "line": 5,
+            "match": {
+              "location": "D:\\TDD\\Sharing\\TDD-TS-master\\step-definitions\\login.js:4"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I provide username, password",
+            "result": {
+              "status": "passed",
+              "duration": 1210532
+            },
+            "line": 6,
+            "match": {
+              "location": "D:\\TDD\\Sharing\\TDD-TS-master\\step-definitions\\login.js:8"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I click Submit button",
+            "result": {
+              "status": "passed",
+              "duration": 510840
+            },
+            "line": 7,
+            "match": {
+              "location": "D:\\TDD\\Sharing\\TDD-TS-master\\step-definitions\\login.js:13"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should login",
+            "result": {
+              "status": "passed",
+              "duration": 561865
+            },
+            "line": 8,
+            "match": {
+              "location": "D:\\TDD\\Sharing\\TDD-TS-master\\step-definitions\\login.js:18"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 14666155631
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\TDD\\Sharing\\TDD-TS-master\\node_modules\\selenium-cucumber-js\\runtime\\world.js:250"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-page",
+    "keyword": "Feature",
+    "line": 2,
+    "name": "Login Page",
+    "tags": [],
+    "uri": "D:/TDD/Sharing/TDD-TS-master/features/Login.feature"
+  }
+]
