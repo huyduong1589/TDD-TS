@@ -1,0 +1,6 @@
+Feature: Change Password
+
+Requirements:
+1. Click on "change Password" button => should redirect to change password page
+2. On the "Change Password" page, provide username, old password, new password, click Submit => password is changed
+.....

@@ -9,7 +9,7 @@ describe('Login Page Test', function() {
     page = new VerifyElement(browser);
     browser.waitForAngularEnabled(false);
     browser.driver.manage().window().maximize();
-    await browser.get("http://3.1.217.123:1313");
+    await browser.get("http://localhost:3000");
     await browser.sleep(5000);
   });
 

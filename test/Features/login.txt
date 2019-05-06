@@ -1,4 +1,16 @@
-Given I navigate to url "http://localhost:3000"
-When I input username and password
-And I click "Submit" button
-Then I can see my page
+Function: Login
+
+Requirements:
+1. Provide valid credential, click "Submit" button => Login successfully
+2. Provide invalid credential (invalid email or password) => Login failed
+
+Unit Test:
+1. GUI: verify elements present
+- Input fields for email, password input and required
+- Submit button
+
+2. API for login function
+- Valid credential => respone message: login successfully; statusCode: 200
+- Invalid credential => respone message: login failed; statusCode: 403
+- Invalid request format:
+> missing fields (email or password) => response message: Bad request; statusCode: 400
