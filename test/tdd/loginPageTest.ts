@@ -7,7 +7,7 @@ describe('Login Page Test', function() {
   beforeEach(async function() {
     page = new VerifyElement(browser);
     browser.waitForAngularEnabled(false);
-    await browser.get("http:localhost:3000");
+    await browser.get("http://3.1.217.123:1313/");
     await browser.sleep(5000);
   });
 
