@@ -28,7 +28,7 @@ describe('Login Page Test', function() {
       await browser.sleep(1000);
       await browser.getCurrentUrl().then(function(value){
           console.log(value);
-          expect(value).toBe("http://localhost:3000/changepassword"); //redirect to ....
+          expect(value).toBe("http://3.1.217.123:1313/changepassword"); //redirect to ....
       })
   });
   
