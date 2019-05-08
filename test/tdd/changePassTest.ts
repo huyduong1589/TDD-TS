@@ -22,7 +22,7 @@ describe('Login Page Test', function() {
 
   // Function
   it('should redirect to change password page after clicking change password button', async function() {
-      await browser.get("http://localhost:3000");
+      await browser.get("http://3.1.217.123:1313/");
       await browser.driver.manage().window().maximize();
       await page.clickElement("//a[@id='changePass']"); //element id=....
       await browser.sleep(1000);
@@ -33,7 +33,7 @@ describe('Login Page Test', function() {
   });
   
   it('should change passsword after providing credential and clicking submit button', async function(){
-      await browser.get("http://localhost:3000/changepassword");
+      await browser.get("http://3.1.217.123:1313/changepassword");
       await browser.driver.manage().window().maximize();
       await page.inputToElement("//input[@id='email']", "dmhuy@tma.com.vn"); // input e
       await page.inputToElement("//input[@id='oldpass']", "123456");
