@@ -9,7 +9,7 @@ describe('Login API Test', function() {
         headers: 
         { 'cache-control': 'no-cache',
             'Content-Type': 'application/json' },
-        body: { email: 'dmhuy@tma.com.vn', password: '123456' },
+        body: { email: '', password: '123456' },
         json: true };
         request(options,async function (error, response, body) {
             console.log(response.body.message);
@@ -24,7 +24,7 @@ describe('Login API Test', function() {
         headers: 
         { 'cache-control': 'no-cache',
             'Content-Type': 'application/json' },
-        body: { email: 'pttlong@tma.com.vn', password: '123456' },
+        body: { email: '', password: '123456' },
         json: true };
         request(options,async function (error, response, body) {
             console.log(response.body.message);
