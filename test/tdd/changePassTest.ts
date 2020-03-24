@@ -35,7 +35,7 @@ describe('Login Page Test', function() {
   it('should change passsword after providing credential and clicking submit button', async function(){
       await browser.get("http://3.1.217.123:1313/changepassword");
       await browser.driver.manage().window().maximize();
-      await page.inputToElement("//input[@id='email']", "dmhuy@tma.com.vn"); // input e
+      await page.inputToElement("//input[@id='email']", ""); // input e
       await page.inputToElement("//input[@id='oldpass']", "123456");
       await page.inputToElement("//input[@id='newpass']", "DEMO1234");
       await browser.sleep(1000);
