@@ -6,7 +6,7 @@ module.exports = function () {
     })
 
     this.When(/^I provide username, password$/, function () {
-      driver.findElement(by.xpath("//input[@id='email']")).sendKeys("dmhuy@tma.com.vn");
+      driver.findElement(by.xpath("//input[@id='email']")).sendKeys("");
       driver.findElement(by.xpath("//input[@id='password']")).sendKeys("123456");
     });
 
