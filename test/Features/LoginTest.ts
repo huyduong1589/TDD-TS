@@ -23,7 +23,7 @@ describe('Login Page Test', function() {
 
   // Function
   it('Should login with valid credentials', async function() {
-    await page.inputToElement("//input[@id='email']", "dmhuy@tma.com.vn");
+    await page.inputToElement("//input[@id='email']", "");
     await browser.sleep(1000);
     await page.inputToElement("//input[@id='password']", "123456");
     await browser.sleep(1000);
@@ -38,7 +38,7 @@ describe('Login Page Test', function() {
   });
 
   it('Should login failed with invalid credentials', async function(){
-      await page.inputToElement("//input[@id='email']", "pttlong@tma.com.vn");
+      await page.inputToElement("//input[@id='email']", "");
       await browser.sleep(1000);
       await page.inputToElement("//input[@id='password']", "123456");
       await browser.sleep(1000);
